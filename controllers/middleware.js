@@ -1,3 +1,5 @@
+var secrets = require('../secrets.js');
+var skillz = require('../skillz.js');
 module.exports = {
   addHeaders: function(req, res, next) {
     res.status(200).set({
@@ -11,4 +13,19 @@ module.exports = {
     });
     next();
   },
+
+  generateId: function(req, res, next){
+  req.body.id = skillz.length + 1
+  next();
+},
+
+  verify: function(req, res, next) {
+    var r = req.params
+    if (r.username === 'j' && r.pin === '4545') {
+      next();
+      res.status(200).json(secrets)
+    } else {
+      res.status(401).json('Not allowed!')
+    }
+  }
 }

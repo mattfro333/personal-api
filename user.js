@@ -38,17 +38,17 @@ restaurants: [
 {
   name: "Olive Garden",
   type: "Italian",
-  rating: 6
+  rating: 1
 },
 {
   name: "Chuck'O'Rama",
   type: "Barf-Fest",
-  rating: 10
+  rating: 5
 },
 {
   name: "BK Lounge",
   type: "Fast Food",
-  rating: 7
+  rating: 3
 }
 
   ]
